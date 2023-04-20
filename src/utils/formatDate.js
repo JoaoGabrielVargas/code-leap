@@ -10,17 +10,15 @@ export default function timeAgo(dateParam) {
   const hours = Math.round(minutes / 60);
   const minutesLeft = Math.round(minutes - (hours * 60));
 
-  console.log(minutes);
-
   if (seconds < 5) {
     return 'now';
   } if (seconds < 60) {
     return `${seconds} seconds ago`;
   } if (seconds < 90) {
     return 'about a minute ago';
-  } if (minutesLeft > 0) {
+  } if (minutesLeft > 0 && hours > 0) {
     return `about ${hours} hours and ${minutesLeft} minutes ago`;
-  } if (minutes > 60 && minutesLeft > 0) {
+  } if (minutes > 60 && minutesLeft > 0 && hours > 0) {
     return `about ${hours} hours and ${minutesLeft} minutes ago`;
   } if (minutes > 60 && minutesLeft <= 0) {
     return `about ${hours - 1} hours and half ago`;

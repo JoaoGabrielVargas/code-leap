@@ -7,3 +7,11 @@
   align-items: center;
   gap: 24px;
 }
+
+.container header {
+  width: 800px;
+  height: 80px;
+  background-color: #7695EC;
+  padding: 27px 0 27px 37px;
+  color: white;
+}

@@ -27,7 +27,8 @@
   width: 452px;
   height: 32px;
   border-radius: 8px;
-  border: 1px solid #777
+  border: 1px solid #777;
+  padding: 8px 11px;
 }
 
 .button {
@@ -49,4 +50,10 @@
 .button:disabled {
   background-color: #777;
   cursor: default;
+}
+
+.button:hover {
+  background-color: white;
+  color: #7695EC;
+  border: 2px solid #7695EC;
 }

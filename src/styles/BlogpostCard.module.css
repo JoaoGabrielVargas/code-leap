@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .container {
   width: 752px;
   height: 316px;
@@ -16,7 +17,7 @@
   color: white;
 }
 
-.namedivcontainer {
+.name_container {
   display: flex;
   margin: 24px 24px 16px;
   justify-content: space-between;

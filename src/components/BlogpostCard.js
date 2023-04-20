@@ -21,7 +21,7 @@ function BlogpostCard({ blogPost }) {
           {title}
         </h1>
       </div>
-      <div className={styles.namedivcontainer}>
+      <div className={styles.name_container}>
         <span>
           {`@${username}`}
         </span>
