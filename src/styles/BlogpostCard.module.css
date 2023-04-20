@@ -1,0 +1,39 @@
+.container {
+  width: 752px;
+  height: 316px;
+  background-color: white;
+  border: solid 1px #999;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #7695EC;
+  height: 70px;
+  padding: 24px;
+  color: white;
+}
+
+.namedivcontainer {
+  display: flex;
+  margin: 24px 24px 16px;
+  justify-content: space-between;
+}
+
+.container span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #777;
+}
+
+.date {
+  color: #777;
+  font-weight: 400;
+}
+
+.content {
+  margin: 0 24px 24px;
+  height: 164px;
+}
