@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   title: '',
   content: '',
+  id: '',
 };
 
 export const slice = createSlice({
@@ -10,12 +11,19 @@ export const slice = createSlice({
   initialState,
   reducers: {
     newPost(state, { payload }) {
-      return { ...state, title: payload.title, content: payload.content };
+      return {
+        ...state, title: payload.title, content: payload.content,
+      };
+    },
+    getId(state, { payload }) {
+      return {
+        ...state, id: payload.id,
+      };
     },
   },
 });
 
-export const { newPost } = slice.actions;
+export const { newPost, getId } = slice.actions;
 
 export const selectNewPost = (state) => state.post;
 

@@ -1,16 +1,34 @@
 /* eslint-disable camelcase */
+
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-/* import { useSelector } from 'react-redux';
-import { selectUser } from '../slices/userSlice'; */
+import { FaPenSquare, FaTrashAlt } from 'react-icons/fa';
 import styles from '../styles/BlogpostCard.module.css';
 import timeAgo from '../utils/formatDate';
+import { selectUser } from '../slices/userSlice';
+import ConfigIcon from './iconContext';
+import { getId } from '../slices/postsSlice';
 
-function BlogpostCard({ blogPost }) {
-/*   const { username } = useSelector(selectUser);
- */ const {
-    username, created_datetime, title, content,
+function BlogpostCard({
+
+  blogPost, isDeleteModalOpen, setIsDeleteModalOpen,
+}) {
+  const {
+    username, created_datetime, title, content, id,
   } = blogPost;
+  const dispatch = useDispatch();
+
+  const deletePost = async () => {
+    dispatch(getId({ id }));
+    setIsDeleteModalOpen(!isDeleteModalOpen);
+  };
+
+  const editPost = () => {
+    console.log('editouuu');
+  };
+
+  const { name } = useSelector(selectUser);
 
   const dateTimeAgo = timeAgo(created_datetime);
 
@@ -20,6 +38,18 @@ function BlogpostCard({ blogPost }) {
         <h1>
           {title}
         </h1>
+        {username === name && (
+        <div className={styles.icons}>
+          <ConfigIcon>
+            <button type="button" onClick={deletePost}>
+              <FaTrashAlt />
+            </button>
+            <button type="button" onClick={editPost}>
+              <FaPenSquare />
+            </button>
+          </ConfigIcon>
+        </div>
+        )}
       </div>
       <div className={styles.name_container}>
         <span>

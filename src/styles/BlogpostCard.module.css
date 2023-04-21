@@ -11,10 +11,24 @@
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
   background-color: #7695EC;
   height: 70px;
   padding: 24px;
   color: white;
+}
+
+.header button {
+  color: white;
+  background-color: #7695EC;
+  border: none;
+  cursor: pointer;
+}
+
+.icons{
+  display: flex;
+  gap: 24px;
 }
 
 .name_container {
@@ -38,3 +52,4 @@
   margin: 0 24px 24px;
   height: 164px;
 }
+

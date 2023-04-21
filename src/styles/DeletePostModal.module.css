@@ -1,0 +1,60 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgb(119 119 119 / 80%);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 660px;
+  height: 146px;
+  border-radius: 16px;
+  background-color: white;
+  border: 1px solid #999;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  align-self: flex-end;
+}
+
+.modal button:nth-child(1) {
+  width: 120px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #999;
+  background-color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal button:nth-child(1):hover {
+  background-color: #999;
+  color: white;
+}
+
+.modal button:nth-child(2):hover {
+  background-color: #971515;
+  color: red
+}
+
+.modal button:nth-child(2) {
+  width: 120px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #FF5151;
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}

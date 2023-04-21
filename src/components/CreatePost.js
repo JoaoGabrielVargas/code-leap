@@ -7,12 +7,13 @@ import { newPost } from '../slices/postsSlice';
 
 function CreatePost() {
   const dispatch = useDispatch();
-  const { username } = useSelector(selectUser);
+  const { name } = useSelector(selectUser);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const handleClick = () => {
-    postIndatabase(title, username, content);
-    dispatch(newPost({ title, content }));
+  const handleClick = async () => {
+    const result = await postIndatabase(title, name, content);
+    const { data: { id } } = result;
+    dispatch(newPost({ title, content, id }));
     setTitle('');
     setContent('');
   };
