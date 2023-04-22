@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import styles from '../styles/DeletePostModal.module.css';
 import deletePostRequest from '../services/deletePostInDb';
@@ -26,5 +27,10 @@ function DeletePostModal({ isOpen, setIsOpen }) {
   }
   return null;
 }
+
+DeletePostModal.propTypes = {
+  isOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
+}.isRequired;
 
 export default DeletePostModal;

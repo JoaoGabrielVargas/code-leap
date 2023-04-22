@@ -38,16 +38,6 @@
   cursor: pointer;
 }
 
-.modal button:nth-child(1):hover {
-  background-color: #999;
-  color: white;
-}
-
-.modal button:nth-child(2):hover {
-  background-color: #971515;
-  color: red
-}
-
 .modal button:nth-child(2) {
   width: 120px;
   height: 32px;
@@ -58,3 +48,14 @@
   border: none;
   cursor: pointer;
 }
+
+.modal button:nth-child(1):hover {
+  background-color: #999;
+  color: white;
+}
+
+.modal button:nth-child(2):hover {
+  background-color: #971515;
+  color: red
+}
+

@@ -11,8 +11,7 @@ import ConfigIcon from './iconContext';
 import { getId } from '../slices/postsSlice';
 
 function BlogpostCard({
-
-  blogPost, isDeleteModalOpen, setIsDeleteModalOpen,
+  blogPost, isDeleteModalOpen, setIsDeleteModalOpen, isEditModalOpen, setIsEditModalOpen,
 }) {
   const {
     username, created_datetime, title, content, id,
@@ -25,7 +24,8 @@ function BlogpostCard({
   };
 
   const editPost = () => {
-    console.log('editouuu');
+    dispatch(getId({ id }));
+    setIsEditModalOpen(!isEditModalOpen);
   };
 
   const { name } = useSelector(selectUser);
@@ -67,13 +67,16 @@ function BlogpostCard({
 }
 
 BlogpostCard.propTypes = {
+  isEditModalOpen: PropTypes.bool.isRequired,
+  setIsEditModalOpen: PropTypes.func.isRequired,
+  isDeleteModalOpen: PropTypes.bool.isRequired,
+  setIsDeleteModalOpen: PropTypes.func.isRequired,
   blogPost: PropTypes.shape({
     username: PropTypes.string,
     title: PropTypes.string,
     created_datetime: PropTypes.string,
     content: PropTypes.string,
   }).isRequired,
-
 };
 
 export default BlogpostCard;

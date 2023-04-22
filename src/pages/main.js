@@ -6,12 +6,14 @@ import BlogpostCard from '../components/BlogpostCard';
 import styles from '../styles/Main.module.css';
 import CreatePost from '../components/CreatePost';
 import DeletePostModal from '../components/DeletePostModal';
+import EditPostModal from '../components/EditPostModal';
 
 function main() {
   const newPost = useSelector(selectNewPost);
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   useEffect(() => {
     fetchFromApi().then((res) => setPosts(res));
@@ -23,6 +25,10 @@ function main() {
       <DeletePostModal
         isOpen={isDeleteModalOpen}
         setIsOpen={() => setIsDeleteModalOpen(!isDeleteModalOpen)}
+      />
+      <EditPostModal
+        isOpen={isEditModalOpen}
+        setIsOpen={() => setIsEditModalOpen(!isEditModalOpen)}
       />
       <header>
         <h1>CodeLeap Network</h1>
@@ -37,6 +43,8 @@ function main() {
             key={el.id}
             isDeleteModalOpen={isDeleteModalOpen}
             setIsDeleteModalOpen={setIsDeleteModalOpen}
+            isEditModalOpen={isEditModalOpen}
+            setIsEditModalOpen={setIsEditModalOpen}
           />
         ))
       }
