@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react';
 import { IconContext } from 'react-icons';
+import PropTypes from 'prop-types';
 
-export default function ConfigIcon({ children }) {
+function ConfigIcon({ children }) {
   const contextValue = useMemo(() => ({ size: '23px' }));
   return (
     <IconContext.Provider value={contextValue}>
@@ -9,3 +10,9 @@ export default function ConfigIcon({ children }) {
     </IconContext.Provider>
   );
 }
+
+ConfigIcon.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default ConfigIcon;

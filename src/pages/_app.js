@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/globals.css';
 import { Roboto } from 'next/font/google';
 import { Provider } from 'react-redux';
@@ -15,3 +16,8 @@ export default function App({ Component, pageProps }) {
     </Provider>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.node,
+  pageProps: PropTypes.array,
+}.isRequired;

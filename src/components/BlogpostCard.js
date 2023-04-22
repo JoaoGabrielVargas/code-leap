@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -76,6 +75,7 @@ BlogpostCard.propTypes = {
     title: PropTypes.string,
     created_datetime: PropTypes.string,
     content: PropTypes.string,
+    id: PropTypes.number,
   }).isRequired,
 };
 
