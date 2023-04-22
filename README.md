@@ -42,7 +42,7 @@ The following folder structure was used:
 
 ```
 
-<p>The deployment was done on Vercel, so you can use the app without having to download and run it on your port 3000! https://dev-finder-omega.vercel.app/ </p>
+<p>The deployment was done on Vercel, so you can use the app without having to download and run it on your port 3000! https://code-leap-beryl.vercel.app/ </p>
   			
 ---
 
@@ -69,10 +69,10 @@ And a good code writer, like [VSCode](https://code.visualstudio.com/)
 ```bash
 
 # Clone this repository
-$ git clone git@github.com:JoaoGabrielVargas/dev-finder.git
+$ git clone git@github.com:JoaoGabrielVargas/code-leap.git
 
 # Go to the project directory in your terminal/cmd
-$ cd dev-finder
+$ cd code-leap
 
 # Install the dependencies
 $ npm install
