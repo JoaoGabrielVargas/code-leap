@@ -12,7 +12,7 @@ export const slice = createSlice({
   reducers: {
     newPost(state, { payload }) {
       return {
-        ...state, title: payload.title, content: payload.content,
+        ...state, title: payload.title, content: payload.content, id: payload.id,
       };
     },
     getId(state, { payload }) {

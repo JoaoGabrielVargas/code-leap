@@ -18,7 +18,7 @@ function main() {
   useEffect(() => {
     fetchFromApi().then((res) => setPosts(res));
     setIsLoading(false);
-  }, [newPost, isDeleteModalOpen]);
+  }, [newPost, isDeleteModalOpen, isEditModalOpen]);
 
   return (
     <div className={styles.container}>
@@ -48,7 +48,6 @@ function main() {
           />
         ))
       }
-
     </div>
   );
 }
