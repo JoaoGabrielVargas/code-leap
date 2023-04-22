@@ -15,8 +15,6 @@ Table of Contents
 <!--ts-->
    * [About the project](#-about-the-project)
    * [Functionalities](#-functionalities)
-   * [Layout](#-layout)
-     * [Web](#web)
    * [How to run the project](#-how-to-run-the-project)
      * [Prerequisites](#prerequisites)
      * [Running the Application](#runnin-the-application)
@@ -44,96 +42,64 @@ The following folder structure was used:
 
 ```
 
-<p>The deployment was done on Vercel, so you can use the app without having to download and run it on your port 3000! https://dev-finder-omega.vercel.app/ </p>
+<p>The deployment was done on Vercel, so you can use the app without having to download and run it on your port 3000! https://code-leap-beryl.vercel.app/ </p>
   			
 ---
 
-## ⚙️ Funcionalidades
+## ⚙️ Functionalities
 
-- [x] Na tela inicial o usuário pode digitar um nome para buscar na API do Github.
-  - [x] Ao clicar em search, um card é mostrado com algumas informações do usuário buscado.
-  - [x] Clicando no card, o usuário é redirecionado para a página de perfil, contendo mais informações do usuário do Github pesquisado, e seus repositórios em cards ordenados pela quantidade de estrelas.
-  - [x] Os cards possuem o nome do repositório, a descrição e a contagem de estrelas.
-  - [x] O usuário pode clicar em fazer uma nova pesquisa e retornar para a tela inicial. 
-  - [x] O usuário pode pesquisar na tela de perfil diretamente pelo campo de busca do cabeçalho sem precisar voltar à tela inicial. 
-   
+- [x] On the home screen the user can choose his name.
+  - [x] The enter button will be disabled if you don't type anything in the username field.
+  - [x] By clicking on the enter button, you will be redirected to the main posts screen. 
+  - [x] On the home screen you will see the posts of everyone who has access to the api.
+  - [x] And you can post, and also delete or edit your own posts. (suck it, twitter!).
 ---
 
-## 🎨 Layout
+## 🚀 How to run the project
 
-### Mobile
+### Prerequisites
 
-<p align="center">
-  <img alt="MobileHome" title="#MobileHome" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/mobile-home.png" width="200px">
-
-  <img alt="MobileProfileDetails" title="#MobileProfileDetails" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/mobile-profile-details.png" width="200px">
-  
-  <img alt="MobileProfileRepos" title="#MobileProfileRepos" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/mobile-profile-repos.png" width="200px">
-</p>
-
-### Web
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="WebHome" title="#WebHome" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-home.png" width="400px">
-  
-  <img alt="WebHomeDetails" title="#WebHomeDetails" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-home-details.png" width="400px">
-
-  <img alt="WebProfileDetails" title="#WebProfileDetails" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-profile-details.png" width="400px">
-  
-  <img alt="WebProfileRepos" title="#WebProfileRepos" src="https://github.com/JoaoGabrielVargas/dev-finder/blob/main/src/assets/web-profile-repos.png" width="400px">
-</p>
-
----
-
-## 🚀 Como executar o projeto
-
-### Pré-requisitos
-
-Antes de começar, você precisa ter instalado em sua máquina as seguintes ferramentas:
+Before starting, you must have installed on your computer:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+And a good code writer, like [VSCode](https://code.visualstudio.com/)
 
 
-## 🧭 Rodando a aplicação
+## 🧭 Running the application
 
 ```bash
 
-# Clone este repositório
-$ git clone git@github.com:JoaoGabrielVargas/dev-finder.git
+# Clone this repository
+$ git clone git@github.com:JoaoGabrielVargas/code-leap.git
 
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd dev-finder
+# Go to the project directory in your terminal/cmd
+$ cd code-leap
 
-# Instale as dependências
+# Install the dependencies
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
+# Run the application in development mode
 $ npm run dev
 
-# A aplicação será aberta na porta indicada pelo VITE. Acesse o link no terminal! :smiley:
+# By default the application opens on your port 3000. Access the link in your terminal! :smiley:
 
 ```
 
 ---
 
-## 🛠 Tecnologias
+## 🛠 Tecnologies
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following tools were used in building the project:
 
 ## **Website**  ([React](https://reactjs.org/))
 
--   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
 -   **[React Icons](https://react-icons.github.io/react-icons/)**
 -   **[Axios](https://github.com/axios/axios)**
--   **[Vite](https://vitejs.dev/)**
--   **[React Loading](https://www.npmjs.com/package/react-loading)**
+-   **[Next](https://nextjs.org//)**
 -   **[EsLint](https://eslint.org/)**
 -   **[Vercel](https://vercel.com/)**
 
-> Veja o arquivo  [package.json](https://github.com/JoaoGabrielVargas/dev-finder/blob/main/package.json)
----
 
-## 🦸 Autor
+## 🦸 Author
 
 <a href="https://www.linkedin.com/in/joaogabrielvargas/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/106772621?v=4" width="100px;" alt="João Gabriel Vargas"/>
